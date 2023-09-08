@@ -1,0 +1,65 @@
+@media only screen and (max-width:768px){
+    .app-sidebar{
+        display: none;
+    }
+    .app-content,
+    .app-content-title{
+        margin: 10px 10px 0 10px;
+    }
+
+    /* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		display: none;
+	}
+	
+	tr { 
+        border: 1px solid #ccc; 
+        
+    }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+        text-align: right;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+        text-align: left;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "ID"; font-weight: bold;}
+	td:nth-of-type(2):before { content: "Tên khách hàng"; font-weight: bold;}
+	td:nth-of-type(3):before { content: "Số điện thoại"; font-weight: bold;}
+	td:nth-of-type(4):before { content: "Địa chỉ"; font-weight: bold;}
+	td:nth-of-type(5):before { content: "Điểm tích lũy"; font-weight: bold;}
+	td:nth-of-type(6):before { content: "Tính năng"; font-weight: bold;}
+}
+
+
+.list_active{
+    display: none;
+}
+
+.nav-link[open=true] + ul{
+    display: block;
+}

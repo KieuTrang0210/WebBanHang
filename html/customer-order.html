@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOWNZⓇ STREETWEAR - Thanh toán đơn hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="/images/logo_web.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 border-bottom pb-5 mt-3 border-secondary-50">
+                <header>
+                    <a href="index.html" aria-label="logo"><img src="../images/logo (1).webp" alt=""></a>
+                </header>
+                <div class="row mt-4">
+                    <!-- cột 1 -->
+                    <div class="col-md-6">
+                        <form class="row" name="frmTourRegister" action="" method="">
+                            <div class="col-md-12">
+                                <h5>Thông tin nhận hàng</h5>
+                            </div>
+            
+                            <!-- Hang thu 1 -->
+                            <div class="col-md-3 text-end mb-4">
+                                <label for="txtEmail" class="form-label">Email</label>
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <input type="email" name="txtEmail" id="txtEmail" class="form-control">
+                            </div>
+
+                            <!-- Hang thu 2 -->
+                            <div class="col-md-3 text-end mb-4">
+                                <label for="txtFullName" class="form-label">Họ và tên</label>
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <input type="text" name="txtFullName" id="txtFullName" class="form-control">
+                            </div>
+                            
+                             <!-- Hang thu 3 -->
+                             <div class="col-md-3 text-end mb-4">
+                                <label for="txtPhone" class="form-label">Điện thoại</label>
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <input type="tel" name="txtPhone" id="txtPhone" class="form-control">
+                            </div>
+
+                            <!-- Hang thu 4 -->
+                            <div class="col-md-3 text-end mb-4">
+                                <label for="txtAddress" class="form-label">Địa chỉ</label>
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <input type="text" name="txtAddress" id="txtAddress" class="form-control">
+                            </div>
+                
+                            <!-- Hang thu 5 -->
+                            <div class="col-md-3 text-end mb-4">
+                                <label for="txtProvince" class="form-label">Tỉnh thành</label>
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <select id="sltProvince" name="sltProvince" class="form-select" aria-label="Default select example">
+                                    <option>---</option>
+                                    <option>Hà Nội</option>
+                                    <option>TP Hồ Chí Minh</option>
+                                    <option>Đà Nẵng</option>
+                                </select>
+                            </div>
+
+                             <!-- Hang thu 6 -->
+                             <div class="col-md-3 text-end mb-4">
+                                <label for="txtDistrict" class="form-label">Quận huyện</label>
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <select id="sltDistrict" name="sltDistrict"  class="form-select" aria-label="Default select example">
+                                </select>
+                            </div>
+
+                             <!-- Hang thu 7 -->
+                             <div class="col-md-3 text-end mb-4">
+                                <label for="txtWard" class="form-label">Phường xã</label>
+                            </div>
+                            <div class="col-md-9 mb-2">
+                                <select id="sltWard" name="sltWard"  class="form-select" aria-label="Default select example">
+                                </select>
+                            </div>
+
+                            <!-- Hang thu 8-->
+                            <div class="col-md-3 mb-2 text-end">
+                                <label for="txtNotes">Ghi chú</label>
+                            </div>
+                
+                            <div class="col-md-9 mb-2">
+                                <textarea class="form-control" name="txtNotes" id="txtNotes" cols="10"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- cột 2 -->
+                    <div class="col-md-6">
+                        <h5>Vận chuyển</h5>
+                        <div class="alert bg-info p-2 text-center">
+                            Vui lòng nhập thông tin giao hàng
+                        </div>
+                        <h5>Thanh toán</h5>
+                        <div class="payment d-flex">
+                            <input class="mt-2" type="radio" name="" id="payment" aria-label="payment">
+                            <p class="ms-2">Thanh toán khi giao hàng (COD)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cột 3 -->
+            <div class="col-md-4 border-start border-secondary-50">
+                <div class="row">
+                    <div class="col-md-12 py-2 border-bottom border-secondary-50">
+                        <h5>Đơn hàng (1 sản phẩm)</h5>
+                    </div>
+                    <div class="col-md-12 border-bottom border-secondary-50">
+                        <ul class="ps-0 pt-3">
+                            <li class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <img class="ms-0 me-3 rounded-2" src="/images/top2.webp" width="80" alt="">
+                                
+                                    <div>
+                                        <p style="margin-bottom: 0;" class="item-name">
+                                            Z-BOT RIDER T-SHIRT
+                                        </p>
+                
+                                        <p class="variant-title-poup mb-lg-0">
+                                            Black / M
+                                        </p>
+                                        <p>Số lượng: 1</p>
+                                    </div>
+                                </div>
+                                <p>399.000₫</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 d-flex py-4 border-bottom border-secondary-50">
+                        <input type="text" class="form-control" name="" id="sale" placeholder="Nhập mã giảm giá">
+                        <button class="btn btn-primary" aria-label="btn_sale">Áp dụng</button>
+                    </div>
+                    <div class="col-md-12 py-4 border-bottom border-secondary-50">
+                        <div class="d-flex justify-content-between">
+                            <p>Tạm tính</p>
+                            <p>399.000₫</p>
+                        </div>
+                        <p>Phí vận chuyển</p>
+                        <p><b><i>Freeship đơn hàng > 500k</i></b></p>
+                    </div>
+                    <div class="col-md-12 mt-2">
+                        <div class="d-flex justify-content-between">
+                            <p class="fs-4">Tổng cộng</p>
+                            <p class="fs-4 text-primary">399.000₫</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a href="../html/cart.html" class="text-decoration-none"><span><</span>Quay về giỏ hàng</a>
+                            <button class="btn btn-primary" aria-label="order">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+
+    </div>
+    <script src="../js/customer-order.js"></script>
+</body>
+</html> 

@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+}
+
+
+/*----------app header----------*/
+.app-header{
+    position: fixed;
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: rgb(0, 28, 64);
+    z-index: 1;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.logout-icon {
+    display: block;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    color: rgb(0, 28, 64);
+    background: rgb(255, 212, 59);
+    transition: background-color 0.3s ease;
+    
+}
+
+.logout-icon:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #f6f6f6;
+}
+
+
+/*----------sidebar----------*/
+.app-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 10px 0 10px;
+    width: 250px;
+    overflow: auto;
+    z-index: 2;
+    background: rgb(0, 28, 64);
+}
+
+.app-sidebar-user-avt {
+    background: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    margin-bottom: 10px;
+    margin-top: 16px;
+}
+
+.app-menu{
+    padding-left: 0;
+}
+.app-menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 1.08em;
+    color: white;
+    border: 1px solid transparent;
+    
+}
+
+.app-menu-item.active, .app-menu-item:hover, .app-menu-item:focus {
+    background: #c6defd;
+    text-decoration: none;
+    color: rgb(22 22 72);
+    box-shadow: none;
+    border: 1px solid rgb(22 22 72);
+    border-radius: 8px;
+}
+
+/*-------app content----------*/
+.app-content{
+    top: 100%;
+    margin: 10px 10px 0 260px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.app-content-title{
+    background-color: #f5f5f5;
+    margin: 10px 10px 0 260px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}

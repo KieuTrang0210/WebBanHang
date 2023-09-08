@@ -1,0 +1,13 @@
+.banner.young {
+    margin-top: 135px;
+    width: 100%;
+    height: 400px;
+    background-image: url(https://bizweb.dktcdn.net/100/414/728/collections/websitev2.jpg?v=1652436631597);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner.young .container {
+    margin: 0 200px;
+}

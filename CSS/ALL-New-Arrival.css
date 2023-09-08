@@ -1,0 +1,13 @@
+.banner.all_new_arrival {
+    margin-top: 135px;
+    width: 100%;
+    height: 400px;
+    background-image: url(https://bizweb.dktcdn.net/100/414/728/collections/untitled-1-01-05ee917f-bc50-4008-a05b-2aa0ea405854.jpg?v=1654593413703);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner.all_new_arrival .container {
+    margin: 0 200px;
+}

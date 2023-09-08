@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://kit.fontawesome.com/4f837c796d.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="/favicon.ico">
+
+
+    <title>Sửa đơn hàng</title>
+</head>
+<body onload="fillForm(index)">
+    <!--App header-->
+    <header class="app-header d-flex">
+        <!--Navbar right menu (logout icon)-->
+        <div></div>
+        <div class="app-nav px-3 justify-content-end" style="position: fixed; right:0">
+            <a href="#" class="logout-icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </div>
+
+        <!--mobile drawer-->
+        <div class="mobile-drawer">
+            <span class="mobile-drawer-menu" onclick="openMenu()">&#9776; MENU</span>
+        
+            <div id="myMenuDrawer" class="menuDrawer">
+                <a href="" class="closebtn" onclick="closeMenu()" style="color: #fff;">&times;</a>
+    
+                    <!--Menu-->
+                <ul class="app-menu">
+                    <li>
+                        <a class="app-menu-item" href="admin.html">
+                            <span>Thống kê</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a class="app-menu-item" href="admin-order-data.html">
+                            <span>Quản lý đơn hàng</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a class="app-menu-item" href="admin-category.html">
+                             <i class="fa-regular fa-ballot-check"></i>
+                             <span>Quản lý danh mục</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a class="app-menu-item" href="admin-product.html">
+                            <span>Quản lý sản phẩm</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a class="app-menu-item" href="admin-customer-data.html">
+                            <span>Quản lý khách hàng</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a class="app-menu-item" href="admin-staff-data.html">
+                            <span>Quản lý nhân viên</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a class="app-menu-item" href="#">
+                            <span>Doanh thu</span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </header>
+
+    <!--Sidebar menu-->
+    <aside class="app-sidebar">
+        <!--admin information-->
+        <div class="app-sidebar-user text-light text-center p-2">
+            <img class="app-sidebar-user-avt" src="../images/avt-admin-ktz.png" alt="">
+            <div>
+                <p class="app-sidebar-username h5"><b>KIỀU TUẤN DŨNG</b></p>
+                <p class="app-sidebar-user-position">Quản lý cửa hàng</p>
+            </div>
+        </div>
+        <hr  width="30%"/>
+
+        <!--Menu-->
+        <ul class="app-menu">
+            <li>
+                <a class="app-menu-item" href="admin.html">
+                     <span>Thống kê</span>
+                </a>
+             </li>
+
+           <li>
+               <a class="app-menu-item" href="admin-order-data.html">
+                    <span>Quản lý đơn hàng</span>
+               </a>
+            </li>
+
+            <li>
+                <a class="app-menu-item" href="admin-category.html">
+                     <i class="fa-regular fa-ballot-check"></i>
+                     <span>Quản lý danh mục</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="app-menu-item" href="admin-product.html">
+                     <i class="fa-regular fa-ballot-check"></i>
+                     <span>Quản lý sản phẩm</span>
+                </a>
+             </li>
+
+             <li>
+                <a class="app-menu-item" href="admin-customer-data.html">
+                     <i class="fa-regular fa-ballot-check"></i>
+                     <span>Quản lý khách hàng</span>
+                </a>
+             </li>
+
+             <li>
+                <a class="app-menu-item" href="admin-staff-data.html">
+                     <i class="fa-regular fa-ballot-check"></i>
+                     <span>Quản lý nhân viên</span>
+                </a>
+             </li>
+
+             <li>
+                <a class="app-menu-item" href="#">
+                     <i class="fa-regular fa-ballot-check"></i>
+                     <span>Doanh thu</span>
+                </a>
+             </li>
+        </ul>
+    </aside>
+
+    <!--content: quan ly nhan vien-->
+
+    <div class="main">
+        <div class="app-content-title"><b>Quản lý đơn hàng > Sửa đơn hàng</b></div>
+        <div class="app-content" >
+             
+            <!--form input-->
+            <form action="" class="row frm-add-order">
+                <div class="  col-md-4">
+                    <label class="control-label">Mã đơn hàng</label>
+                    <input class="form-control" id="order-id" type="text">
+                </div>
+
+                <div class="  col-md-4">
+                    <label class="control-label">Mã sản phẩm</label>
+                    <input class="form-control" id="product-id" type="text">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="control-label">Tên sản phẩm</label>
+                    <input class="form-control" id="product-name" type="text">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="control-label">Tên khách hàng</label>
+                    <input class="form-control" id="customer-name" type="text">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="control-label">Số điện thoại khách hàng</label>
+                    <input class="form-control" id="customer-phone" type="tel">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="control-label">Địa chỉ giao hàng</label>
+                    <input class="form-control" id="address" type="text">
+                </div>
+                
+                <div class="col-md-4">
+                    <label class="control-label">Mã nhân viên bán hàng</label>
+                    <input class="form-control" id="staff-id" type="text">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="control-label">Nhân viên bán hàng</label>
+                    <input class="form-control" id="staff-name" type="text">
+                </div>
+                
+                
+                
+                <div class="col-md-4">
+                    <label class="control-label">Số lượng</label>
+                    <input class="form-control" id="quantity" type="number">
+                </div>
+                
+                <div class="col-md-4">
+                    <label class="control-label">Tổng tiền</label>
+                    <input class="form-control" id="price" type="number">
+                </div>
+
+
+                <div class="col-md-4">
+                    <label class="control-label">Ngày tạo đơn hàng</label>
+                    <input class="form-control" id="date" type="date">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="control-label">Tình trạng đơn hàng</label>
+                    <div>
+                        <select name="" id="order-status">
+                            <option value="1">Chờ xử lý</option>
+                            <option value="2">Chờ thanh toán</option>
+                            <option value="3">Đang giao</option>
+                            <option value="4">Hoàn thành</option>
+                            <option value="5">Đã hủy</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <label class="control-label">Ghi chú</label>
+                    <textarea class="form-control" id="note" rows="3"></textarea>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary" type="submit" onclick="update(index)">Lưu thay đổi</button>
+                    <a class="btn btn-danger" href="admin-order-data.html">Hủy bỏ</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+
+ <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+ <script src="../js/admin.js"></script>
+ <script src="../js/admin-order.js "></script>
+</body>
+</html>

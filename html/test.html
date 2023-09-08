@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+    .list_active{
+    display: none;
+}
+
+.nav-link[open=true] + ul{
+    display: block;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+<body>
+    <a href="#" class="nav-link dropdown-toggle" id="list"  title="Sản phẩm">Sản phẩm</a>
+
+    <ul class="list_active list-unstyled ms-3">
+        <li><a  class="nav-link" href="z-bot-capsule.html">Z-BOT CAPSULE</a></li>
+        <li><a class="nav-link" href="young-wild-n-trippy.html">YOUNG/WILD N' TRIPPY</a></li>
+        <li>
+          <a href="#" class="nav-link dropdown-toggle" id="list" title="Sản phẩm">TOP</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link dropdown-toggle" title="Sản phẩm">BOTTOM</a>
+        </li>
+    </ul>
+
+    <!--modal-->
+   
+  <button class="btn btn-primary btn-sm edit" id="myBtn" type="button" title="Sửa"><i class="fa fa-edit"></i></button>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" >&times;</span>
+      <form action="" class="row frm-add-order">
+        <div class="  col-md-4">
+            <label class="control-label">Mã nhân viên</label>
+            <input class="form-control" id="id" type="text">
+        </div>
+
+        <div class="  col-md-4">
+            <label class="control-label">Tên nhân viên</label>
+            <input class="form-control" id="name" type="text">
+        </div>
+
+        <div class="col-md-4">
+            <label class="control-label">Giới tính</label>
+            <input class="form-control" id="gender" type="text">
+        </div>
+
+        <div class="col-md-4">
+            <label class="control-label">Số điện thoại</label>
+            <input class="form-control" id="phone" type="text">
+        </div>
+
+        <div class="col-md-4">
+            <label class="control-label">Vị trí</label>
+            <input class="form-control" id="position" type="tel">
+        </div>
+
+        <div class="col-md-4">
+            <label class="control-label">Địa chỉ</label>
+            <input class="form-control" id="address" type="text">
+        </div>
+        <div>
+          <button class="btn btn-primary" id="add-employee-btn" type="submit" onclick="" >Lưu thay đổi</button>
+          <a class="btn btn-danger" href="admin-staff-data.html">Hủy bỏ</a>
+        </div>
+
+    </form>
+    </div>
+      
+
+  </div>
+    <!--modal-->
+
+
+
+</body>
+<script>
+                var dropdownButton = document.getElementById('list')
+  console.log(dropdownButton)
+  
+  dropdownButton.addEventListener('click', function(event){
+    event.preventDefault();
+    let state = this.getAttribute('open');
+    if (state){
+        this.removeAttribute('open');
+    }
+    else {
+        this.setAttribute('open', true)
+    }
+  })
+
+  var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
